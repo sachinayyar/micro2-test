@@ -24,7 +24,7 @@
     $products = array(
         array(
             'name' => 'T-Shirt',
-            'image' => 'tshirt.jpg',
+            'image' => 'https://images.pexels.com/photos/1335077/pexels-photo-1335077.jpeg?cs=srgb&dl=automobile-automotive-car-1335077.jpg&fm=jpg',
             'price' => 19.99
         ),
         array(
