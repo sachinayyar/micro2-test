@@ -29,7 +29,7 @@
         ),
         array(
             'name' => 'Jeans',
-            'image' => 'jeans.jpg',
+            'image' => 'C:\Users\integra\Pictures\architectue.PNG',
             'price' => 49.99
         ),
         array(
