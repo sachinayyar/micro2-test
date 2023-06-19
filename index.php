@@ -1,50 +1,51 @@
-<?php
-if (isset($_POST['submit'])) {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $mobile = $_POST['mobile'];
-    $city = $_POST['city'];
-
-    $host = getenv("mysql_host");
-    $username = getenv("username");
-    $password = getenv("password");
-    $database = getenv("database");
-    
-    $conn = mysqli_connect($host, $username, $password, $database);
-
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-
-    $sql = "INSERT INTO students (name, email, mobile, city) VALUES ('$name', '$email', '$mobile', '$city')";
-
-    if (mysqli_query($conn, $sql)) {
-        header('Content-Type: application/json');
-        echo json_encode(array('message' => 'Data saved successfully.'));
-    } else {
-        header('Content-Type: application/json');
-        echo json_encode(array('message' => 'Error saving data.'));
-    }
-
-    mysqli_close($conn);
-} else {
-?>
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-<title>MySQL to HTML</title>
-<link rel="stylesheet" href="styles.css">
+    <title>Cloth Products</title>
+    <style>
+        .product {
+            width: 200px;
+            display: inline-block;
+            margin: 10px;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        .product p {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-<form action="#" method="POST">
-    Name : <input type="text" name="name"> <br>
-    Email : <input type="email" name="email"> <br> 
-    Mobile : <input type="number" name="mobile"> <br>
-    City : <input type="text" name="city"> <br>
-    <input type="submit" name="submit" value="send data">
-</form>
+    <?php
+    // Array of cloth products
+    $products = array(
+        array(
+            'name' => 'T-Shirt',
+            'image' => 'tshirt.jpg',
+            'price' => 19.99
+        ),
+        array(
+            'name' => 'Jeans',
+            'image' => 'jeans.jpg',
+            'price' => 49.99
+        ),
+        array(
+            'name' => 'Dress',
+            'image' => 'dress.jpg',
+            'price' => 79.99
+        )
+    );
+
+    // Displaying products
+    foreach ($products as $product) {
+        echo '<div class="product">';
+        echo '<img src="images/' . $product['image'] . '" alt="' . $product['name'] . '">';
+        echo '<p>' . $product['name'] . ' - $' . $product['price'] . '</p>';
+        echo '</div>';
+    }
+    ?>
 </body>
 </html>
-<?php
-}
-?>
