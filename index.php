@@ -158,7 +158,7 @@
         var cartButton = document.getElementById("cart-button");
 
         loginButton.addEventListener("click", function() {
-        window.location.href = "http://microservices-demo-my-gateway-525eca1d5089dbdc-istio-system.apps.ocp4.imss.com/loginpage";
+        window.location.href = "/loginpage";
             alert("Login button clicked!");
         });
 
