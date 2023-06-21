@@ -161,13 +161,11 @@
 
         $redirectUrl = '/productpage';
 
-        function redirectToLoginPage() {
         $redirectUrl = 'https://php-login-test-project.apps.cluster-sbj27.sbj27.sandbox2370.opentlc.com/';
         header('HTTP/1.1 302 Found');
         header('Location: ' . $redirectUrl);
         exit();
 
-    }
         
       //  loginButton.addEventListener("click", function() {
       //  window.location.href = "";
