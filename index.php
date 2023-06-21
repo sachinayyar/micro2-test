@@ -154,15 +154,25 @@
 
     <script>
         // JavaScript code for handling button clicks
-        var loginButton = document.getElementById("login-button");
-        var cartButton = document.getElementById("cart-button");
+        <div>
+        <button id="login-button" onclick="redirectToLoginPage()">Login</button>
+        <button id="cart-button">Cart</button>
+        </div>
 
+        $redirectUrl = '/productpage';
 
+        function redirectToLoginPage() {
+        $redirectUrl = 'https://php-login-test-project.apps.cluster-sbj27.sbj27.sandbox2370.opentlc.com/';
+        header('HTTP/1.1 302 Found');
+        header('Location: ' . $redirectUrl);
+        exit();
 
-        loginButton.addEventListener("click", function() {
-        window.location.href = "https://php-login-test-project.apps.cluster-sbj27.sbj27.sandbox2370.opentlc.com/";
-            alert("Login button clicked!");
-        });
+    }
+        
+      //  loginButton.addEventListener("click", function() {
+      //  window.location.href = "";
+      //      alert("Login button clicked!");
+      //  });
 
         cartButton.addEventListener("click", function() {
             alert("Cart button clicked!");
