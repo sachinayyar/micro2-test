@@ -158,7 +158,7 @@
         var cartButton = document.getElementById("cart-button");
 
         loginButton.addEventListener("click", function() {
-        window.location.href = "https://th.bing.com/th/id/R.339cbff589da266b3e24ab3933c29f84?rik=gnA2HFtCOJ%2b1mw&riu=http%3a%2f%2f1.bp.blogspot.com%2f_ltoEMuaSQ-I%2fTDy6npUcP6I%2fAAAAAAAAAAs%2fUEaE8Yk9tt4%2fs1600%2fcar6.jpg&ehk=rl8ysLHMoqUCUsOvHAiZcR0rWkgS%2buDmjH9%2fHRSUx7A%3d&risl=&pid=ImgRaw&r=0";
+        window.location.href = "http://microservices-demo-my-gateway-525eca1d5089dbdc-istio-system.apps.cluster-sbj27.sbj27.sandbox2370.opentlc.com/loginpage";
             alert("Login button clicked!");
         });
 
