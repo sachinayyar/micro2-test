@@ -101,8 +101,8 @@
             text-decoration: underline;
         }
         
-        /* Style for the login and cart buttons */
-        #login-button, #cart-button {
+        /* Style for the login, cart, and shipping address buttons */
+        #login-button, #cart-button, #shipping-address-button {
             background-color: #007bff;
             color: white;
             border: none;
@@ -116,7 +116,7 @@
             margin-right: 10px;
         }
 
-        #login-button:hover, #cart-button:hover {
+        #login-button:hover, #cart-button:hover, #shipping-address-button:hover {
             background-color: #0056b3;
         }
     </style>
@@ -127,6 +127,7 @@
     <div>
         <button id="login-button">Login</button>
         <button id="cart-button">Cart</button>
+        <button id="shipping-address-button">Shipping Address</button>
     </div>
     
 
@@ -156,14 +157,20 @@
         // JavaScript code for handling button clicks
         var loginButton = document.getElementById("login-button");
         var cartButton = document.getElementById("cart-button");
+        var shippingAddressButton = document.getElementById("shipping-address-button");
 
         loginButton.addEventListener("click", function() {
-        window.location.href = "/loginpage";
+            window.location.href = "/loginpage";
             alert("Login button clicked!");
         });
 
         cartButton.addEventListener("click", function() {
             alert("Cart button clicked!");
+        });
+
+        shippingAddressButton.addEventListener("click", function() {
+            window.location.href = "/shipping";
+            alert("Shipping Address button clicked!");
         });
     </script>
 </body>
