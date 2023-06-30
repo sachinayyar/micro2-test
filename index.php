@@ -160,7 +160,7 @@
         var shippingAddressButton = document.getElementById("shipping-address-button");
 
         loginButton.addEventListener("click", function() {
-            window.location.href = "/loginpage";
+            window.location.href = "loginpage-service.microservices-demo.svc.cluster.local/loginpage";
             alert("Login button clicked!");
         });
 
@@ -169,7 +169,7 @@
         });
 
         shippingAddressButton.addEventListener("click", function() {
-            window.location.href = "/shipping";
+            window.location.href = "shipping-service.microservices-demo.svc.cluster.local/shipping";
             alert("Shipping Address button clicked!");
         });
     </script>
